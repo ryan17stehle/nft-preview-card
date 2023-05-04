@@ -1,0 +1,101 @@
+/* Variables */
+:root {
+    /* Font size & Line height */
+    --heading: 22px;
+    --body: 18px;
+    --lh-body: 26px;
+    --caption: 16px;
+    /* Colors */
+    --soft-blue: #8BACD9;
+    --white: #fff;
+    --cyan: #00FFF8;
+    --main-bg-blue: #0D192C;
+    --card-bg-blue: #15263F;
+    --line-blue: #2E405A;
+}
+
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    background-color: var(--main-bg-blue);
+    color: var(--soft-blue);
+    min-height: 100vh;
+    font-size: var(--body);
+    line-height: var(--lh-body);
+
+    /* Center */
+    display: grid;
+    place-items: center;
+}
+
+hr {
+    border: 1px solid var(--line-blue);
+}
+
+/* Containers & Utility */
+.container {
+    background-color: var(--card-bg-blue);
+    /* Could use min-width, max-width here instead */
+    width: clamp(280px, 100%, 375px);
+    /* Width, height specifications in the figma file */
+    height: 596px;
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    /* Spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap {
+    gap: 0.5rem;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Image */
+.img-container {
+    display: grid;
+    place-items: center;
+}
+
+.img {
+    border-radius: 1rem;
+    max-width: 100%;
+}
+
+/* Title Text */
+.title {
+    color: var(--white);
+    font-size: var(--heading);
+}
+
+/* Ethereum Price */
+.eth-price {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+/* Avatar */
+.avatar-icon {
+    height: 33px;
+    width: 33px;
+}
